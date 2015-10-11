@@ -23,3 +23,6 @@ This will enable the module with Magento and confirm that Magento knows that the
 
     bin/magento setup:upgrade
 Required after enabling a module to make sure any setup scripts are executed for the module and that the module version gets registered in the database.
+
+## Notes
+It appears that as of [Oct 7th](https://github.com/magento/magento2/commit/86d5abe5adf8f452e52e5876c1ba2008aa0e6e30) modules that are copied also need the registration.php file in the module for them to be usable by Magento. [Prior to the Oct 7th builds](https://github.com/magento/magento2/commit/168d27c990e99cda444fff21291be92d9f923ed3) in the develop branch the registration.php file was not necessary.
